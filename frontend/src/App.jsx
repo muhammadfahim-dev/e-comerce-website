@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { Footer, LoginPopup, Navbar } from "./components"
-import "./App.css"
 import { Routes, Route } from "react-router-dom"
 import { Home, Cart, PlaceOrder, Verify, MyOrders } from "./pages"
 
