@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { Footer, LoginPopup, Navbar } from "./components"
+import { Footer, LoginPopup, Navbar } from "./components/index.js"
 import { Routes, Route } from "react-router-dom"
-import { Home, Cart, PlaceOrder, Verify, MyOrders } from "./pages"
+import { Home, Cart, PlaceOrder, Verify, MyOrders } from "./pages/index.js"
 
 function App() {
   const [showLogin, setShowLogin] = useState(false)
