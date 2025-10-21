@@ -23,6 +23,9 @@ app.use("/images", express.static("./public/uploads"))
 app.use("/api/v1/user", userRouter)
 app.use("/api/v1/cart", cartRouter)
 app.use("/api/v1/order", orderRouter)
+app.use("/", (req, res) => {
+    res.send({ message: "All Okay" })
+})
 
 // error middlewares
 import { errorHandler } from "./middlewares/error.middlewares.js"
