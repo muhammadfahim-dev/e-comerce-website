@@ -13,7 +13,7 @@ dotenv.config({
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY)
 
 const placeOrder = asyncHandler(async (req, res) => {
-    const frontend_url = "http://localhost:5173"
+    const frontend_url = "https://e-comerce-website.pages.dev/"
     const { userId, items, amount, address } = req.body
 
     const newOrder = await Order.create({
