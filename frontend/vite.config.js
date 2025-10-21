@@ -7,8 +7,8 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   server: {
     proxy: {
-      "/api": "http://localhost:8000",
-      "/images": "http://localhost:8000"
+      "/api": "https://ecomerce-backend-teal.vercel.app/",
+      "/images": "https://ecomerce-backend-teal.vercel.app/"
     }
   },
   plugins: [react(), tailwindcss(),],
