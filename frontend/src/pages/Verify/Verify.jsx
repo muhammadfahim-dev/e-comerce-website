@@ -10,7 +10,7 @@ function Verify() {
     const navigate = useNavigate()
 
     const verifyPayment = async () => {
-        const response = await axios.post("/api/v1/order/verify", { orderId, success })
+        const response = await axios.post("https://ecomerce-backend-teal.vercel.app/api/v1/order/verify", { orderId, success })
 
         if (response.data.success) {
             navigate("/my-orders")

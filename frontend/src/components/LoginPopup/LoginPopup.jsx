@@ -25,14 +25,14 @@ function LoginPopup({ setShowLogin }) {
     event.preventDefault()
 
     if (currState === "Login") {
-      const response = await axios.post("/api/v1/user/login", data)
+      const response = await axios.post("https://ecomerce-backend-teal.vercel.app/api/v1/user/login", data)
       if (response.data.success) {
         setToken(response.data.jwtToken)
         localStorage.setItem("token", response.data.jwtToken)
         setShowLogin(false)
       }
     } else {
-      const response = await axios.post("/api/v1/user/register", data)
+      const response = await axios.post("https://ecomerce-backend-teal.vercel.app/api/v1/user/register", data)
       if (response.data.success) {
         setToken(response.data.jwtToken)
         localStorage.setItem("token", response.data.jwtToken)

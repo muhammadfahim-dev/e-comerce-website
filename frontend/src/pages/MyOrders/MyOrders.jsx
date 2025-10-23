@@ -9,7 +9,7 @@ function MyOrders() {
     const { token } = useFoodStore()
 
     const fetchOrders = async () => {
-        const response = await axios.post("/api/v1/order/userorders", {}, {
+        const response = await axios.post("https://ecomerce-backend-teal.vercel.app/api/v1/order/userorders", {}, {
             headers: { Authorization: `Bearer ${token}` }
         })
 

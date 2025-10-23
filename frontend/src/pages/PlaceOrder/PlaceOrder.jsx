@@ -38,7 +38,7 @@ function PlaceOrder() {
       amount: getTotalCartAmount() + 2
     }
 
-    let response = await axios.post("/api/v1/order/place", orderData, { headers: { Authorization: `Bearer ${token}` } })
+    let response = await axios.post("https://ecomerce-backend-teal.vercel.app/api/v1/order/place", orderData, { headers: { Authorization: `Bearer ${token}` } })
 
     if (response.data.success) {
       const { session_url } = response.data
