@@ -19,7 +19,7 @@ const StoreContextProvider = (props) => {
 
         if (token) {
             await axios.post(
-                "/api/v1/cart/add",
+                "https://ecomerce-backend-teal.vercel.app/api/v1/cart/add",
                 { itemId },
                 { headers: { Authorization: `Bearer ${token}` } }
             )
@@ -30,12 +30,12 @@ const StoreContextProvider = (props) => {
         setCartItems(prev => ({ ...prev, [itemId]: prev[itemId] - 1 }))
 
         if (token) {
-            await axios.post('/api/v1/cart/remove', { itemId }, { headers: { Authorization: `Bearer ${token}` } })
+            await axios.post('https://ecomerce-backend-teal.vercel.app/api/v1/cart/remove', { itemId }, { headers: { Authorization: `Bearer ${token}` } })
         }
     }
 
     const loadCartData = async (token) => {
-        const response = await axios.post("/api/v1/cart/get", {}, { headers: { Authorization: `Bearer ${token}` } })
+        const response = await axios.post("https://ecomerce-backend-teal.vercel.app/api/v1/cart/get", {}, { headers: { Authorization: `Bearer ${token}` } })
 
         setCartItems(response.data.cartData)
     }
