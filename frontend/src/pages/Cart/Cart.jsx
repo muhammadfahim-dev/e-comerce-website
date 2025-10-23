@@ -21,7 +21,7 @@ function Cart() {
         <hr className='h-1 bg-[#e2e2e2] border-none' />
 
         {
-          food_list.map((item, index) => {
+          food_list?.map((item, index) => {
             if (cartItems[item._id] > 0) {
               return (
                 <div className="" key={index}>
